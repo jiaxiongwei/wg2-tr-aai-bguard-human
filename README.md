@@ -6,8 +6,8 @@ agentic AI systems**
 Proposed new Technical Report of the Focus Group on Trust and Identity for
 humans and agentic AI (FG-TIDA), Working Group 2 (WG2). Status: **draft**.
 
-📄 **Web page:** ./target/html/
-📥 **PDF:** ./target/latex
+📄 **Web page:** https://jiaxiongwei.github.io/wg2-tr-aai-bguard-human/
+📥 **PDF:** https://jiaxiongwei.github.io/wg2-tr-aai-bguard-human/specification.pdf
 
 ## What this document is
 
@@ -48,6 +48,10 @@ pip install -r requirements.txt
 sphinx-build -b html src/doc target/html                            # web
 sphinx-build -b latex src/doc target/latex && make -C target/latex  # PDF
 ```
+
+`target/` is a **local build directory only** — it is git-ignored and never
+published. The public site and PDF are built by GitHub Actions on every push to
+`main` and deployed to the addresses above.
 
 - `src/doc/index.rst` — title, abstract, background, authors, keywords, foreword.
 - `src/doc/chapters/` — one file per clause; `09_…/` and `15_…/` are split into
