@@ -6,8 +6,8 @@ agentic AI systems**
 Proposed new Technical Report of the Focus Group on Trust and Identity for
 humans and agentic AI (FG-TIDA), Working Group 2 (WG2). Status: **draft**.
 
-📄 **Web page:** https://jiaxiongwei.github.io/wg2-tr-aai-bguard-human/
-📥 **PDF:** https://jiaxiongwei.github.io/wg2-tr-aai-bguard-human/specification.pdf
+📄 **Web page:** ./target/html/
+📥 **PDF:** ./target/latex
 
 ## What this document is
 
