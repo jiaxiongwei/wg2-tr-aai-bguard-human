@@ -1,40 +1,67 @@
-# TIDA Specification Template
+# TR.aai-bguard-human
 
-**See the template live:**
-📄 **[Web page](https://fg-tida.github.io/spec-template/)** ·
-📥 **[PDF](https://fg-tida.github.io/spec-template/specification.pdf)**
+**Analysis and assessment framework of human-facing safety and guardrails of
+agentic AI systems**
 
-The pages you see there are produced by this repository — they double as the
-template's documentation, explaining and demonstrating how to write a spec.
+Proposed new Technical Report of the Focus Group on Trust and Identity for
+humans and agentic AI (FG-TIDA), Working Group 2 (WG2). Status: **draft (V41)**.
 
-> **Starting a new specification?** Follow
-> **[WG-ONBOARDING.md](WG-ONBOARDING.md)**. Once your repo is created, replace
-> the text of this README with a short description of *your* specification
-> (what it is, its status, and a link to its published site).
+📄 **Web page:** https://jiaxiongwei.github.io/wg2-tr-aai-bguard-human/
+📥 **PDF:** https://jiaxiongwei.github.io/wg2-tr-aai-bguard-human/specification.pdf
 
----
+## What this document is
 
-A specification for the FG-TIDA working groups, authored with the shared TIDA
-template: one source that builds a modern web page and a print-ready PDF, with
-support for diagrams and auto-generated API references.
+Agentic AI systems pursue goals, invoke tools, keep memory and act across
+sessions, so the effect of an interaction is no longer confined to a single
+output. This Technical Report analyses the *human-facing* safety of such
+systems — the cumulative psychological and cognitive effect of sustained
+interaction, including emotional dependence, erosion of user autonomy and drift
+from a shared account of reality — and proposes a vendor-neutral framework for
+assessing whether human-facing guardrails are present and effective.
 
-## Quick start
+It covers terminology and a human-impact risk taxonomy, the current state and
+near-term trends, guardrail mechanisms and their limits, an assessment framework
+with factors, enforcement layers, a long-horizon evaluation and intervention
+loop, required artefacts and accountability roles, standardization points, and
+adaptation across cultures, ethics, religions and regulation. It does not set
+hard operational limits; its first goal is common measurement and a verifiable
+evidence base.
 
-1. In your Working Group's GitHub organization (`fg-tida-wg<n>`), click **Use this
-   template → Create a new repository**, named `wg<n>-<acronym>-<spec-name>`.
-2. In the new repo: **Settings → Pages → Source: GitHub Actions**.
-3. Edit the content under `src/doc/` — replace the `<placeholders>` and the
-   example text. Full instructions are in **[WG-ONBOARDING.md](WG-ONBOARDING.md)**.
-4. Push to `main`. The site and PDF publish automatically to
-   `https://fg-tida-wg<n>.github.io/<repo-name>/`.
+## Contents
 
-## In this repository
+| | |
+|---|---|
+| 1–5 | Scope, References, Definitions, Abbreviations, Conventions |
+| 6–8 | Overview, Current state and future trends, Human-impact risk taxonomy |
+| 9 | A general assessment framework for human-facing safety |
+| 10–11 | Standardization points, Conclusion |
+| Appendix I–IV | Key terms, dimensions of human impact, guardrail mapping, industrial practice |
+| Bibliography, Annex A | References and the A.1 justification form |
 
-- `src/doc/index.rst` — the document front matter (title, abstract, authors…).
-- `src/doc/chapters/` — the chapters; they explain and demonstrate how to write
-  content, then you replace them with your own.
-- `CONTRIBUTING.md` — how to contribute, and how to build, preview, and customise the document.
-- `WG-ONBOARDING.md` — the full step-by-step guide for authors.
+## Working on the document
 
-Built on the open-source [CUTEspecs](https://github.com/debora-com/CUTEspecs)
-template.
+The document is authored in reStructuredText and built with Sphinx into a web
+page and a print PDF.
+
+```shell
+pip install -r requirements.txt
+sphinx-build -b html src/doc target/html                            # web
+sphinx-build -b latex src/doc target/latex && make -C target/latex  # PDF
+```
+
+- `src/doc/index.rst` — title, abstract, background, authors, keywords, foreword.
+- `src/doc/chapters/` — one file per clause; `09_…/` and `15_…/` are split into
+  `_fragment.rst` pieces with `.. include::`.
+- `src/doc/images/` — figures.
+- `src/doc/conf.py` — project metadata and the `cover_*` values used on the PDF cover.
+
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for how to propose a change, and
+**[WG-ONBOARDING.md](WG-ONBOARDING.md)** for the TIDA authoring workflow.
+
+## Editor
+
+Xiongwei Jia, China Unicom — jiaxw9@chinaunicom.cn
+
+## Licence
+
+MIT, per [LICENSE](LICENSE). See [CHANGELOG.md](CHANGELOG.md) for document history.
