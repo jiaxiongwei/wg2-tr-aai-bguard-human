@@ -21,3 +21,7 @@ that loop a shared vocabulary, a machine-readable risk-signal representation and
 an agreed escalation policy, so that it can be implemented consistently and
 assessed independently - and to mount it on the same runtime substrate shared
 across implementations.
+
+.. raw:: latex
+
+    \setcounter{secnumdepth}{-1}
